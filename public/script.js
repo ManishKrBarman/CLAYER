@@ -4,6 +4,13 @@ const songs = [
     { title: "Tor Pirite", artist: "Zubeen Garg, Jeet Gannguli, Priyo Chatterjee", src: "/assets/music/m3.mp3", cover: "/assets/images/m3.png" },
     { title: "Ami Je Tomar 3.0", artist: "PritaAmaal Mallik, Shreya Ghoshal, Sameer, Pritam", src: "/assets/music/m4.mp3", cover: "/assets/images/m4.png" },
     { title: "Teri Baaton Mein Aisa Uljha Jiya", artist: "Tanishk Bagchi, Mitraz, Raghav, Sachin-Jigar", src: "/assets/music/m5.mp3", cover: "/assets/images/m5.png" },
+    { title: "Akon - Lonely ", artist: "Akon", src: "/assets/music/m6.mp3", cover: "/assets/images/m6.png" },
+    { title: "Dekha Ek Khwab Song", artist: "Kishore Kumar, Lata Mangeshkar, Shiv-Hari", src: "/assets/music/m7.mp3", cover: "/assets/images/m7.png" },
+    { title: "Ishq Hai", artist: "", src: "/assets/music/m8.mp3", cover: "/assets/images/m8.png" },
+    { title: "Koi Mil Gaya", artist: "Udit Narayan, Chitra", src: "/assets/music/m9.mp3", cover: "/assets/images/m9.png" },
+    { title: "Tere Mast Mast Do Nain", artist: "", src: "/assets/music/m10.mp3", cover: "/assets/images/m10.png" },
+    { title: "Je Deshe Chena Jana Manush Kono Nai", artist: "", src: "/assets/music/m11.mp3", cover: "/assets/images/m11.png" },
+    { title: "Aha Ki Anando", artist: "", src: "/assets/music/m12.mp3", cover: "/assets/images/m12.png" },
 ];
 
 let currentSongIndex = 0;
