@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #3b4241;
@@ -6,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    max-height: 100vh;
     margin: 0;
 }
 
@@ -15,6 +23,7 @@ body {
     width: 90%;
     max-width: 400px;
     height: 92vh;
+    min-height: 500px;
     background: #1f1f1f;
     border-radius: 10px;
     padding: 20px;
@@ -25,10 +34,14 @@ body {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
+    min-height: 370px;
+    max-height: 380px;
+
 }
 
-.song-info h2,
-.song-info p {
+h2,
+p {
+    font-family: "Satisfy", serif;
     margin: 5px 0;
 }
 
