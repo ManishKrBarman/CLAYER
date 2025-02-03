@@ -1,0 +1,7 @@
+const songs = [
+    { title: "Agar Tum Saath Ho", artist: "Arijit Singh, Alka Yagnik", src: "assets/music/m1.mp3", cover: "assets/images/m1.png" },
+    { title: "Abhi Na Jao Chhod Kar", artist: "Pritam", src: "assets/music/m2.mp3", cover: "assets/images/m2.png" },
+    { title: "Tor Pirite", artist: "Zubeen Garg, Jeet Gannguli, Priyo Chatterjee", src: "assets/music/m3.mp3", cover: "assets/images/m3.png" },
+    { title: "Ami Je Tomar 3.0", artist: "PritaAmaal Mallik, Shreya Ghoshal, Sameer, Pritam", src: "assets/music/m4.mp3", cover: "assets/images/m4.png" },
+    { title: "Teri Baaton Mein Aisa Uljha Jiya", artist: "Tanishk Bagchi, Mitraz, Raghav, Sachin-Jigar", src: "assets/music/m5.mp3", cover: "assets/images/m5.png" },
+];

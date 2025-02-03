@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAYER</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="music-player">
+            <div class="album-art">
+                <h2 id="song-title">Song Title</h2>
+                <img src="assets/images/album.jpg" alt="Album Art" id="album-art">
+                <p id="artist-name">Artist Name</p>
+            </div>
+            <div class="controls">
+                <button id="prev" class="control-btn">⏮</button>
+                <button id="play-pause" class="control-btn">▶️</button>
+                <button id="next" class="control-btn">⏭</button>
+            </div>
+            <div class="progress-bar">
+                <input type="range" id="progress" value="0" step="1">
+            </div>
+            <div class="time-info">
+                <span id="current-time">0:00</span><span id="duration">0:00</span>
+            </div>
+            <div class="controls">
+                <button id="shuffle-icon" class="control-btn">🔀</button>
+                <button id="repeat-icon" class="control-btn">🔂</button>
+                <button id="volume-btn" class="control-btn">🔊</button>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3b4241;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.music-player {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    height: 92vh;
+    background: #1f1f1f;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.album-art img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.song-info h2,
+.song-info p {
+    margin: 5px 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.control-btn:hover {
+    color: #1db954;
+}
+
+.progress-bar input {
+    width: 100%;
+}
+
+.time-info {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
