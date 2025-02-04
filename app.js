@@ -15,12 +15,12 @@ router.get("/", (req, res) => {
 app.use("/.netlify/functions/app", router);
 module.exports.handler = serverless(app);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 
 app.get('/', (req, res) => {
     res.render('home');
 });
 
 app.listen(PORT, () => {
-    console.log('Server started on port 3000');
+    console.log(`Server started on port ${PORT}`);
 })
