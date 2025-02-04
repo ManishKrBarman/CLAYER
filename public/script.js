@@ -91,6 +91,10 @@ function skip(step) {
     playPauseBtn.textContent = "⏸";
 }
 
+audio.addEventListener("ended", () => {
+    skip(1); // Move to the next song
+});
+
 playPauseBtn.addEventListener("click", playPause);
 prevBtn.addEventListener("click", () => skip(-1));
 nextBtn.addEventListener("click", () => skip(1));
