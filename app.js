@@ -6,7 +6,6 @@ const router = express.Router();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.set('view engine', 'ejs');
 
 router.get("/", (req, res) => {
     res.send("App is running..");
