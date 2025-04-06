@@ -1,111 +1,100 @@
-const songs = [
-    { title: "Agar Tum Saath Ho", artist: "Arijit Singh, Alka Yagnik", src: "/assets/music/m1.mp3", cover: "/assets/images/m1.png" },
-    { title: "Abhi Na Jao Chhod Kar", artist: "Pritam", src: "/assets/music/m2.mp3", cover: "/assets/images/m2.png" },
-    { title: "Tor Pirite", artist: "Zubeen Garg, Jeet Gannguli, Priyo Chatterjee", src: "/assets/music/m3.mp3", cover: "/assets/images/m3.png" },
-    { title: "Ami Je Tomar 3.0", artist: "PritaAmaal Mallik, Shreya Ghoshal, Sameer, Pritam", src: "/assets/music/m4.mp3", cover: "/assets/images/m4.png" },
-    { title: "Teri Baaton Mein Aisa Uljha Jiya", artist: "Tanishk Bagchi, Mitraz, Raghav, Sachin-Jigar", src: "/assets/music/m5.mp3", cover: "/assets/images/m5.png" },
-    { title: "Akon - Lonely ", artist: "Akon", src: "/assets/music/m6.mp3", cover: "/assets/images/m6.png" },
-    { title: "Dekha Ek Khwab Song", artist: "Kishore Kumar, Lata Mangeshkar, Shiv-Hari", src: "/assets/music/m7.mp3", cover: "/assets/images/m7.png" },
-    { title: "Ishq Hai", artist: "", src: "/assets/music/m8.mp3", cover: "/assets/images/m8.png" },
-    { title: "Koi Mil Gaya", artist: "Udit Narayan, Chitra", src: "/assets/music/m9.mp3", cover: "/assets/images/m9.png" },
-    { title: "Tere Mast Mast Do Nain", artist: "", src: "/assets/music/m10.mp3", cover: "/assets/images/m10.png" },
-    { title: "Je Deshe Chena Jana Manush Kono Nai", artist: "", src: "/assets/music/m11.mp3", cover: "/assets/images/m11.png" },
-    { title: "Aha Ki Anando", artist: "", src: "/assets/music/m12.mp3", cover: "/assets/images/m12.png" },
-];
+// Theme toggle functionality
+function toggleTheme() {
+    const html = document.documentElement;
+    const themeLabel = document.getElementById('themeLabel');
+    const themeIcon = document.getElementById('themeIcon');
 
-let currentSongIndex = 0;
-const audio = new Audio(songs[currentSongIndex].src);
-
-const playPauseBtn = document.getElementById("play-pause");
-const prevBtn = document.getElementById("prev");
-const nextBtn = document.getElementById("next");
-const progress = document.getElementById("progress");
-const currentTime = document.getElementById("current-time");
-const duration = document.getElementById("duration");
-const songTitle = document.getElementById("song-title");
-const artistName = document.getElementById("artist-name");
-const albumArt = document.getElementById("album-art");
-const shuffleIcon = document.getElementById("shuffle-icon");
-const repeatIcon = document.getElementById("repeat-icon");
-const volumeBtn = document.getElementById("volume-btn");
-
-// Handle volume toggle (Mute/Unmute)
-volumeBtn.addEventListener("click", () => {
-    if (audio.volume > 0) {
-        audio.volume = 0; // Mute
-        volumeBtn.textContent = "🔇"; // Mute icon
+    if (html.getAttribute('data-theme') === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        themeLabel.textContent = 'Dark Mode';
+        themeIcon.innerHTML = '<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />';
     } else {
-        audio.volume = 1; // Max volume
-        volumeBtn.textContent = "🔊"; // Volume icon
-    }
-});
-
-// Shuffle songs randomly
-shuffleIcon.addEventListener("click", () => {
-    currentSongIndex = Math.floor(Math.random() * songs.length);
-    loadSong(currentSongIndex);
-    audio.play();
-    playPauseBtn.textContent = "⏸";
-});
-
-// Enable or disable repeat mode
-repeatIcon.addEventListener("click", () => {
-    audio.loop = !audio.loop;
-    repeatIcon.textContent = audio.loop ? "🔁" : "🔂";
-});
-
-function loadSong(index) {
-    const song = songs[index];
-    audio.src = song.src;
-    songTitle.textContent = song.title;
-    artistName.textContent = song.artist;
-    albumArt.src = song.cover;
-}
-
-function playPause() {
-    if (audio.paused) {
-        audio.play();
-        playPauseBtn.textContent = "⏸";
-    } else {
-        audio.pause();
-        playPauseBtn.textContent = "▶️";
+        html.setAttribute('data-theme', 'dark');
+        themeLabel.textContent = 'Light Mode';
+        themeIcon.innerHTML = '<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />';
     }
 }
 
-function updateProgress() {
-    progress.value = (audio.currentTime / audio.duration) * 100 || 0;
-    currentTime.textContent = formatTime(audio.currentTime);
-    duration.textContent = formatTime(audio.duration);
+// Create background animation
+function createBackgroundAnimation() {
+    const bgAnimation = document.getElementById('bgAnimation');
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    // Create circuit lines
+    for (let i = 0; i < 15; i++) {
+        const line = document.createElement('div');
+        line.className = 'circuit-line';
+        line.style.top = `${Math.random() * 100}%`;
+        line.style.animationDelay = `${Math.random() * 10}s`;
+        bgAnimation.appendChild(line);
+    }
+
+    // Create circuit dots
+    for (let i = 0; i < 25; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'circuit-dot';
+        dot.style.left = `${Math.random() * 100}%`;
+        dot.style.top = `${Math.random() * 100}%`;
+        dot.style.animationDelay = `${Math.random() * 3}s`;
+        bgAnimation.appendChild(dot);
+    }
 }
 
-function formatTime(seconds) {
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60).toString().padStart(2, "0");
-    return `${mins}:${secs}`;
+// Animate elements when they enter viewport
+function animateOnScroll() {
+    const sections = document.querySelectorAll('.section');
+    const statBoxes = document.querySelectorAll('.stat-box');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const phaseBoxes = document.querySelectorAll('.phase-box');
+    const chartBars = document.querySelectorAll('.chart-bar');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach((section, index) => {
+        section.style.animationDelay = `${0.1 * index}s`;
+        observer.observe(section);
+    });
+
+    statBoxes.forEach((box, index) => {
+        setTimeout(() => {
+            box.style.opacity = '1';
+            box.style.transform = 'scale(1)';
+        }, 500 + 100 * index);
+    });
+
+    timelineItems.forEach((item, index) => {
+        setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+        }, 500 + 100 * index);
+    });
+
+    phaseBoxes.forEach((box, index) => {
+        setTimeout(() => {
+            box.style.opacity = '1';
+            box.style.transform = 'scale(1)';
+        }, 500 + 100 * index);
+    });
+
+    chartBars.forEach((bar, index) => {
+        setTimeout(() => {
+            bar.style.opacity = '1';
+            bar.style.transform = 'scale(1)';
+        }, 500 + 100 * index);
+    });
 }
 
-function skip(step) {
-    currentSongIndex = (currentSongIndex + step + songs.length) % songs.length;
-    loadSong(currentSongIndex);
-    audio.play();
-    playPauseBtn.textContent = "⏸";
-}
-
-audio.addEventListener("ended", () => {
-    skip(1); // Move to the next song
-});
-
-playPauseBtn.addEventListener("click", playPause);
-prevBtn.addEventListener("click", () => skip(-1));
-nextBtn.addEventListener("click", () => skip(1));
-audio.addEventListener("timeupdate", updateProgress);
-progress.addEventListener("input", () => {
-    audio.currentTime = (progress.value / 100) * audio.duration;
-});
-
-// Initialize player
-loadSong(currentSongIndex);
-
-// Set initial volume
-audio.volume = 1; // Set default volume to full
-volumeBtn.textContent = "🔊"; // Default volume icon
+// Call functions on page load
+window.addEventListener('load', () => {
+    createBackgroundAnimation();
+    animateOnScroll();
+})
