@@ -1,246 +1,385 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Empowering India's Semiconductor Future</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
-            id="themeIcon">
-            <path
-                d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-        </svg>
-        <span id="themeLabel">Dark Mode</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+        id="themeIcon"
+      >
+        <path
+          d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        />
+      </svg>
+      <span id="themeLabel">Dark Mode</span>
     </button>
 
     <div class="background-animation" id="bgAnimation"></div>
 
     <div class="poster">
-        <header>
-            <h1>Empowering India's Semiconductor Future</h1>
-            <p class="subtitle">Building a Self-Reliant Ecosystem for Global Leadership</p>
-        </header>
+      <header>
+        <h1>Empowering India's Semiconductor Future</h1>
+        <p class="subtitle">
+          Building a Self-Reliant Ecosystem for Global Leadership
+        </p>
+      </header>
 
-        <div class="content">
-            <div class="section full-width">
-                <h2>Introduction</h2>
-                <p>India stands at a pivotal moment in its technological journey, with the potential to become a global
-                    leader in semiconductor manufacturing and design. This presentation explores the current landscape,
-                    challenges, opportunities, and strategic initiatives that are shaping India's semiconductor future.
-                </p>
-            </div>
-
-            <div class="section half-width">
-                <h2>Current Landscape</h2>
-                <p>India currently imports over 90% of its semiconductor needs, creating significant dependency and
-                    economic vulnerability. Despite this, India possesses:</p>
-                <ul>
-                    <li>A robust talent pool of engineers and designers</li>
-                    <li>Strong software expertise that can complement hardware development</li>
-                    <li>Growing domestic market with increasing demand</li>
-                    <li>Government focus through initiatives like "Make in India" and "Digital India"</li>
-                </ul>
-            </div>
-
-            <div class="section half-width">
-                <h2>Market Potential</h2>
-                <p>India's semiconductor market is projected to grow substantially in the coming years:</p>
-
-                <div class="chart-container">
-                    <div class="chart-bar" style="height: 40%;">
-                        <span>$15B</span>
-                        <div class="chart-label">2021</div>
-                    </div>
-                    <div class="chart-bar" style="height: 60%;">
-                        <span>$23B</span>
-                        <div class="chart-label">2023</div>
-                    </div>
-                    <div class="chart-bar" style="height: 80%;">
-                        <span>$55B</span>
-                        <div class="chart-label">2026</div>
-                    </div>
-                    <div class="chart-bar" style="height: 100%;">
-                        <span>$85B</span>
-                        <div class="chart-label">2030</div>
-                    </div>
-                </div>
-                <p>Driven by growth in electronics manufacturing, automotive electronics, IoT devices, and telecom
-                    infrastructure.</p>
-            </div>
-
-            <div class="section third-width">
-                <h2>Key Initiatives</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2021</div>
-                        <div class="timeline-content">
-                            India Semiconductor Mission (ISM) launched with $10 billion incentive package
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2022</div>
-                        <div class="timeline-content">
-                            Production Linked Incentive (PLI) scheme for semiconductor manufacturing
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2023</div>
-                        <div class="timeline-content">
-                            Design Linked Incentive (DLI) scheme to promote semiconductor design
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2024</div>
-                        <div class="timeline-content">
-                            First fab facilities break ground in Gujarat and Karnataka
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section third-width">
-                <h2>Strategic Focus Areas</h2>
-                <ul>
-                    <li><strong>Fab Ecosystem:</strong> Establishing cutting-edge fabrication facilities with global
-                        partners</li>
-                    <li><strong>ATMP Units:</strong> Assembly, Testing, Marking and Packaging capabilities</li>
-                    <li><strong>Compound Semiconductors:</strong> Focus on GaN, SiC for power electronics and automotive
-                        applications</li>
-                    <li><strong>Design Ecosystem:</strong> Strengthening IP development and design capabilities</li>
-                    <li><strong>Specialty Fabs:</strong> MEMs, sensors, power devices, displays</li>
-                </ul>
-            </div>
-
-            <div class="section third-width">
-                <h2>Investment Landscape</h2>
-                <div class="stat-box">
-                    <div class="stat-number">$10B+</div>
-                    <div class="stat-label">Government Incentives</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">$25B+</div>
-                    <div class="stat-label">Expected Private Investment by 2025</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">3+</div>
-                    <div class="stat-label">Major Fab Projects Announced</div>
-                </div>
-            </div>
-
-            <div class="section half-width">
-                <h2>Talent Development</h2>
-                <p>Addressing the talent gap is critical for sustainable growth:</p>
-                <ul>
-                    <li><strong>Semiconductor Research Centers:</strong> Establishing centers of excellence at IITs and
-                        other institutions</li>
-                    <li><strong>Industry-Academia Partnerships:</strong> Collaborative research and development programs
-                    </li>
-                    <li><strong>Specialized Training Programs:</strong> Skill development initiatives for design,
-                        manufacturing, and testing</li>
-                    <li><strong>Global Talent Repatriation:</strong> Incentives for diaspora professionals to return and
-                        contribute</li>
-                </ul>
-            </div>
-
-            <div class="section half-width">
-                <h2>Challenges & Solutions</h2>
-                <table>
-                    <tr>
-                        <th>Challenge</th>
-                        <th>Solution Approach</th>
-                    </tr>
-                    <tr>
-                        <td>High capital investment requirements</td>
-                        <td>Public-private partnerships, foreign investments, fiscal incentives</td>
-                    </tr>
-                    <tr>
-                        <td>Technology gap</td>
-                        <td>Technology transfer arrangements, joint ventures with global leaders</td>
-                    </tr>
-                    <tr>
-                        <td>Infrastructure limitations</td>
-                        <td>Dedicated semiconductor manufacturing zones with reliable utilities</td>
-                    </tr>
-                    <tr>
-                        <td>Skilled workforce shortage</td>
-                        <td>Specialized education programs, international training collaborations</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="section full-width">
-                <h2>Strategic Roadmap: 2025-2030</h2>
-                <div style="display: flex; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
-                    <div class="phase-box">
-                        <h3>Phase 1: Foundation (2025-2026)</h3>
-                        <ul>
-                            <li>Complete first fabs and ATMP units</li>
-                            <li>Establish semiconductor design hubs</li>
-                            <li>Create specialized educational programs</li>
-                            <li>Develop supply chain infrastructure</li>
-                        </ul>
-                    </div>
-                    <div class="phase-box">
-                        <h3>Phase 2: Expansion (2027-2028)</h3>
-                        <ul>
-                            <li>Scale manufacturing capabilities</li>
-                            <li>Diversify into specialty semiconductors</li>
-                            <li>Increase domestic value addition</li>
-                            <li>Expand R&D infrastructure</li>
-                        </ul>
-                    </div>
-                    <div class="phase-box">
-                        <h3>Phase 3: Global Integration (2029-2030)</h3>
-                        <ul>
-                            <li>Achieve significant export capabilities</li>
-                            <li>Develop indigenous cutting-edge technologies</li>
-                            <li>Establish position in global supply chains</li>
-                            <li>Create semiconductor intellectual property</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section full-width">
-                <h2>Conclusion & Call to Action</h2>
-                <p>India's semiconductor journey represents a transformative opportunity to enhance technological
-                    sovereignty, create high-value jobs, and establish leadership in the global electronics ecosystem.
-                    Success will require:</p>
-                <ul>
-                    <li>Sustained government commitment and policy stability</li>
-                    <li>Strategic global partnerships with technology leaders</li>
-                    <li>Focused investment in specialized education and research</li>
-                    <li>Development of domestic supply chains and auxiliary industries</li>
-                    <li>Creation of demand incentives to drive market growth</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: bold;">By leveraging its strengths in software, design, and
-                    human capital while addressing infrastructure and technology gaps, India can build a thriving
-                    semiconductor ecosystem that drives economic growth and technological innovation.</p>
-            </div>
-
-            <div class="section full-width references">
-                <h2>References & Further Reading</h2>
-                <ol>
-                    <li>India Semiconductor Mission (ISM) - Ministry of Electronics and Information Technology</li>
-                    <li>Semiconductor Industry Association - Global Market Analysis, 2023</li>
-                    <li>India Electronics and Semiconductor Association (IESA) - Annual Report</li>
-                    <li>National Policy on Electronics - Government of India</li>
-                    <li>Global Semiconductor Supply Chain Report - World Semiconductor Trade Statistics</li>
-                </ol>
-            </div>
+      <div class="content">
+        <div class="section full-width">
+          <h2>Introduction</h2>
+          <p>
+            India stands at a pivotal moment in its technological journey, with
+            the potential to become a global leader in semiconductor
+            manufacturing and design. This presentation explores the current
+            landscape, challenges, opportunities, and strategic initiatives that
+            are shaping India's semiconductor future.
+          </p>
         </div>
 
-        <footer>
-            <p>© 2025 - Empowering India's Semiconductor Future</p>
-            <div class="contact">
-                <p>For more information: info@indiasemiconductormission.gov.in | www.indiasemiconductor.org</p>
+        <div class="section half-width">
+          <h2>Current Landscape</h2>
+          <p>
+            India currently imports over 90% of its semiconductor needs,
+            creating significant dependency and economic vulnerability. Despite
+            this, India possesses:
+          </p>
+          <ul>
+            <li>A robust talent pool of engineers and designers</li>
+            <li>
+              Strong software expertise that can complement hardware development
+            </li>
+            <li>Growing domestic market with increasing demand</li>
+            <li>
+              Government focus through initiatives like "Make in India" and
+              "Digital India"
+            </li>
+          </ul>
+        </div>
+
+        <div class="section half-width">
+          <h2>Market Potential</h2>
+          <p>
+            India's semiconductor market is projected to grow substantially in
+            the coming years, comparing with Taiwan:
+          </p>
+          <div class="charts">
+            <!-- Taiwan Semiconductor Market -->
+            <div class="chart-container">
+              <!-- Data Bars -->
+              <div class="chart-bar" style="height: 35%">
+                <span>$78B</span>
+                <div class="chart-label">2018</div>
+              </div>
+              <div class="chart-bar" style="height: 43.33%">
+                <span>$85.5B</span>
+                <div class="chart-label">2019</div>
+              </div>
+              <div class="chart-bar" style="height: 56%">
+                <span>$92B</span>
+                <div class="chart-label">2020</div>
+              </div>
+              <div class="chart-bar" style="height: 72%">
+                <span>$95B</span>
+                <div class="chart-label">2021</div>
+              </div>
+              <div class="chart-bar" style="height: 93.33%">
+                <span>$184B</span>
+                <div class="chart-label">2022</div>
+              </div>
+              <!-- SVG Curve -->
+              <svg
+                class="chart-curve"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M10,90 C30,50, 70,50, 90,10"
+                  stroke="black"
+                  fill="transparent"
+                  stroke-width="2"
+                />
+              </svg>
             </div>
-        </footer>
+            <!-- India Semiconductor Market -->
+            <div class="chart-container">
+              <!-- Data Bars -->
+              <div class="chart-bar" style="height: 30%">
+                <span>₹1.125T</span>
+                <div class="chart-label">2021</div>
+              </div>
+              <div class="chart-bar" style="height: 50%">
+                <span>₹2.4T</span>
+                <div class="chart-label">2025</div>
+              </div>
+              <div class="chart-bar" style="height: 100%">
+                <span>₹3.75–5.25T</span>
+                <div class="chart-label">2030</div>
+              </div>
+              <!-- SVG Curve -->
+              <svg
+                class="chart-curve"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M10,90 C30,60, 70,60, 90,10"
+                  stroke="black"
+                  fill="transparent"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="country">
+            <h4>Taiwan</h4>
+            <h4>India</h4>
+          </div>
+
+          <p>
+            Driven by growth in electronics manufacturing, automotive
+            electronics, IoT devices, and telecom infrastructure.
+          </p>
+        </div>
+
+        <div class="section third-width">
+          <h2>Key Initiatives</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2021</div>
+              <div class="timeline-content">
+                India Semiconductor Mission (ISM) launched with $10 billion
+                incentive package
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2022</div>
+              <div class="timeline-content">
+                Production Linked Incentive (PLI) scheme for semiconductor
+                manufacturing
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2023</div>
+              <div class="timeline-content">
+                Design Linked Incentive (DLI) scheme to promote semiconductor
+                design
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2024</div>
+              <div class="timeline-content">
+                First fab facilities break ground in Gujarat and Karnataka
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section third-width">
+          <h2>Strategic Focus Areas</h2>
+          <ul>
+            <li>
+              <strong>Fab Ecosystem:</strong> Establishing cutting-edge
+              fabrication facilities with global partners
+            </li>
+            <li>
+              <strong>ATMP Units:</strong> Assembly, Testing, Marking and
+              Packaging capabilities
+            </li>
+            <li>
+              <strong>Compound Semiconductors:</strong> Focus on GaN, SiC for
+              power electronics and automotive applications
+            </li>
+            <li>
+              <strong>Design Ecosystem:</strong> Strengthening IP development
+              and design capabilities
+            </li>
+            <li>
+              <strong>Specialty Fabs:</strong> MEMs, sensors, power devices,
+              displays
+            </li>
+          </ul>
+        </div>
+
+        <div class="section third-width">
+          <h2>Investment Landscape</h2>
+          <div class="stat-box">
+            <div class="stat-number">₹76,000 Cr</div>
+            <div class="stat-label">Government Incentives</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">No Data</div>
+            <div class="stat-label">Expected Private Investment by 2025</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Major Fab Projects Announced</div>
+          </div>
+        </div>
+
+        <div class="section half-width">
+          <h2>Talent Development</h2>
+          <p>Addressing the talent gap is critical for sustainable growth:</p>
+          <ul>
+            <li>
+              <strong>Semiconductor Research Centers:</strong> Establishing
+              centers of excellence at IITs and other institutions
+            </li>
+            <li>
+              <strong>Industry-Academia Partnerships:</strong> Collaborative
+              research and development programs
+            </li>
+            <li>
+              <strong>Specialized Training Programs:</strong> Skill development
+              initiatives for design, manufacturing, and testing
+            </li>
+            <li>
+              <strong>Global Talent Repatriation:</strong> Incentives for
+              diaspora professionals to return and contribute
+            </li>
+          </ul>
+        </div>
+
+        <div class="section half-width">
+          <h2>Challenges & Solutions</h2>
+          <table>
+            <tr>
+              <th>Challenge</th>
+              <th>Solution Approach</th>
+            </tr>
+            <tr>
+              <td>High capital investment requirements</td>
+              <td>
+                Public-private partnerships, foreign investments, fiscal
+                incentives
+              </td>
+            </tr>
+            <tr>
+              <td>Technology gap</td>
+              <td>
+                Technology transfer arrangements, joint ventures with global
+                leaders
+              </td>
+            </tr>
+            <tr>
+              <td>Infrastructure limitations</td>
+              <td>
+                Dedicated semiconductor manufacturing zones with reliable
+                utilities
+              </td>
+            </tr>
+            <tr>
+              <td>Skilled workforce shortage</td>
+              <td>
+                Specialized education programs, international training
+                collaborations
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="section full-width">
+          <h2>Strategic Roadmap: 2025-2030</h2>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: 20px;
+              flex-wrap: wrap;
+            "
+          >
+            <div class="phase-box">
+              <h3>Phase 1: Foundation (2025-2026)</h3>
+              <ul>
+                <li>Complete first fabs and ATMP units</li>
+                <li>Establish semiconductor design hubs</li>
+                <li>Create specialized educational programs</li>
+                <li>Develop supply chain infrastructure</li>
+              </ul>
+            </div>
+            <div class="phase-box">
+              <h3>Phase 2: Expansion (2027-2028)</h3>
+              <ul>
+                <li>Scale manufacturing capabilities</li>
+                <li>Diversify into specialty semiconductors</li>
+                <li>Increase domestic value addition</li>
+                <li>Expand R&D infrastructure</li>
+              </ul>
+            </div>
+            <div class="phase-box">
+              <h3>Phase 3: Global Integration (2029-2030)</h3>
+              <ul>
+                <li>Achieve significant export capabilities</li>
+                <li>Develop indigenous cutting-edge technologies</li>
+                <li>Establish position in global supply chains</li>
+                <li>Create semiconductor intellectual property</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section full-width">
+          <h2>Conclusion & Call to Action</h2>
+          <p>
+            India's semiconductor journey represents a transformative
+            opportunity to enhance technological sovereignty, create high-value
+            jobs, and establish leadership in the global electronics ecosystem.
+            Success will require:
+          </p>
+          <ul>
+            <li>Sustained government commitment and policy stability</li>
+            <li>Strategic global partnerships with technology leaders</li>
+            <li>Focused investment in specialized education and research</li>
+            <li>
+              Development of domestic supply chains and auxiliary industries
+            </li>
+            <li>Creation of demand incentives to drive market growth</li>
+          </ul>
+          <p style="margin-top: 15px; font-weight: bold">
+            By leveraging its strengths in software, design, and human capital
+            while addressing infrastructure and technology gaps, India can build
+            a thriving semiconductor ecosystem that drives economic growth and
+            technological innovation.
+          </p>
+        </div>
+
+        <div class="section full-width references">
+          <h2>References & Further Reading</h2>
+          <ol>
+            <li>
+              India Semiconductor Mission (ISM) - Ministry of Electronics and
+              Information Technology
+            </li>
+            <li>
+              Semiconductor Industry Association - Global Market Analysis, 2023
+            </li>
+            <li>
+              India Electronics and Semiconductor Association (IESA) - Annual
+              Report
+            </li>
+            <li>National Policy on Electronics - Government of India</li>
+            <li>
+              Global Semiconductor Supply Chain Report - World Semiconductor
+              Trade Statistics
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <footer>
+        <p>Empowering India's Semiconductor Future</p>
+      </footer>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
+</html>
+
